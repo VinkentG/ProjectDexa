@@ -1,0 +1,291 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main{
+    min-height: 100%;
+    min-width: 100%;
+    overflow-x: hidden;
+    background: linear-gradient(to right, rgb(236,236,236) 50%, #4dd6b6 50%);
+}
+.main-container{
+    height: 89vh;
+    width: 70%;
+    background: linear-gradient(to right bottom, rgba(236,236,236,0.7),rgba(236,236,236,0.3));
+    border-radius: 1rem;
+    margin: 2rem auto;
+    box-shadow: 0.5rem 0.5rem 2rem -1rem rgb(58,57,57);
+    /* box-shadow: 0.5rem 0.5rem 2rem -1rem white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+.left,.right{
+    margin: 2rem 2rem;
+    box-shadow: 0.5rem 0.5rem 2rem -1rem rgb(58,57,57);
+    height: 80%;
+    width: 100%;
+    position: relative;
+    /* z-index: 1;
+    background: inherit;
+    overflow: hidden; */
+}
+
+/* .left:before, .right:before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    filter: blur(10px);
+    margin: -20px;
+  } */
+/*  Left /////////////////////////////////////////////////////////////// */
+.left{
+    position: relative;
+    width: 850px;
+    height: 400px;
+    /* background: rgba(0,0,0,0.75); */
+    display: flex;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.left::after{
+content: "";
+position: absolute;
+width: 600px;
+height: 600px;
+background-image: conic-gradient(transparent,transparent,transparent,#d400d4);
+animation: animate 4s linear infinite;
+animation-delay: -2s;
+}
+.left::before{
+content: "";
+position: absolute;
+width: 600px;
+height: 600px;
+background-image: conic-gradient(transparent,transparent,transparent,#00ccff);
+animation: animate 4s linear infinite;
+}
+/* @keyframes animate{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+} */
+.left span{
+    position: absolute;
+    inset: 5px;
+    border-radius: 16px;
+    background: rgb(236,236,236) ;
+    z-index: 1;
+}
+.left .in{
+    position: relative;
+    z-index: 2;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.left input{
+    display: block;
+    border: none;
+    height: 2rem;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 1.5rem;
+    padding: 0.2rem 1rem;
+    font-size: small;
+    color: grey;
+}
+.left input:focus{
+    outline: none;
+    border: none;
+}
+.left label{
+    display: block;
+    text-align: left;
+    margin: auto;
+    float: left;
+    width: 78%;
+    font-size: small;
+    color: gray;
+    margin-bottom: 0.5rem;
+}
+.left #submit{
+    width: 100%;
+    background:  #4dd6b6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: all 0.3 ease;
+}
+.left #submit:hover{
+    box-shadow: 0.5px 0.5px 6px -1px black;
+    transition: all 0.3 ease;
+}
+.left .img-class{
+    height: 5rem;
+}
+.left .img-class #img-id{
+height: 100%;
+object-fit: cover;
+}
+/* Right /////////////////////////////////////////////////////////////////////// */
+.right .welcome{
+    padding-left: 30%;
+    padding-top: -20px;
+    font-size: 30px;
+    font-weight: 50px;
+    /* padding: 5%; */
+}
+.right #logo{
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    padding-top: 13%;
+    object-fit: cover;
+}
+/* Register  /////////////////////////////////////////////////////////////// */
+.contain{
+    position: relative;
+    width: 300px;
+    height: 450px;
+    background: rgba(0,0,0,0.75);
+    display: flex;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.contain Label{
+    color: black;
+}
+.contain::after{
+content: "";
+position: absolute;
+width: 600px;
+height: 600px;
+background-image: conic-gradient(transparent,transparent,transparent,#d400d4);
+animation: animate 4s linear infinite;
+animation-delay: -2s;
+}
+.contain::before{
+content: "";
+position: absolute;
+width: 600px;
+height: 600px;
+background-image: conic-gradient(transparent,transparent,transparent,#00ccff);
+animation: animate 4s linear infinite;
+}
+/* @keyframes animate{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+} */
+.contain span{
+    position: absolute;
+    inset: 5px;
+    border-radius: 16px;
+    background: rgb(236,236,236);
+    z-index: 1;
+}
+.contain .in{
+    position: relative;
+    z-index: 2;
+}
+
+/* Add /////////////////////////////////////////////////////////////// */
+.contains{
+    position: relative;
+    width: 400px;
+    height: 550px;
+    background: rgba(0,0,0,0.75);
+    display: flex;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    margin-Right: 40%;
+    margin-left: 33%;
+
+}
+.contains::after{
+content: "";
+position: absolute;
+width: 700px;
+height: 700px;
+background-image: conic-gradient(transparent,transparent,transparent,#00ccff);
+animation: animate 4s linear infinite;
+animation-delay: -2s;
+}
+.contains::before{
+content: "";
+position: absolute;
+width: 700px;
+height: 700px;
+background-image: conic-gradient(transparent,transparent,transparent,#00ccff);
+animation: animate 4s linear infinite;
+}
+.contains .span1{
+    position: absolute;
+    inset: 5px;
+    border-radius: 16px;
+    background: white;
+    z-index: 1;
+}
+.contains .in{
+    position: relative;
+    z-index: 2;
+}
+.contains .title{
+   margin-left: 45px;
+   margin-bottom: 20px;
+   color: black;
+}
+.contains .div1{
+    background: linear-gradient(to right bottom, rgba(236,236,236,0.7),rgba(236,236,236,0.3));
+    width: 100%;
+    border-radius: 10px;
+}
+/* .in{
+    margin-bottom: 10px;
+}
+.form{
+    margin-top: 5%;
+    margin-Right: 30%;
+    margin-left: 30%;
+} */
+@keyframes animate{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
