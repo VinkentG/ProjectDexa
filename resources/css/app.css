@@ -194,16 +194,6 @@ height: 600px;
 background-image: conic-gradient(transparent,transparent,transparent,#00ccff);
 animation: animate 4s linear infinite;
 }
-/* @keyframes animate{
-    0%
-    {
-        transform: rotate(0deg);
-    }
-    100%
-    {
-        transform: rotate(360deg);
-    }
-} */
 .contain span{
     position: absolute;
     inset: 5px;

@@ -17,7 +17,6 @@ use Inertia\Inertia;
 */
 
 Route::get('/',[HomeController::class,'index'])->middleware(['auth', 'verified'])->name('dashboard');
-
 Route::resource('posts', HomeController::class);
 
 // Route::get('/', function () {
