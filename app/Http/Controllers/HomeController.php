@@ -74,7 +74,6 @@ public function create()
     public function update(StorePostRequest $request, Post $post)
     {
         $post->update($request->validated());
-
         return Redirect::route('posts.index');
     }
 

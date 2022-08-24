@@ -12,7 +12,7 @@ import Button from "react-bootstrap/Button";
 import Tilt from "react-parallax-tilt";
 
 export default function Add(props) {
-    const [show, setShow] = useState(false);
+    // const [show, setShow] = useState(false);
 
     const { data, setData, post, processing, errors, reset } = useForm({
         Nama: "",

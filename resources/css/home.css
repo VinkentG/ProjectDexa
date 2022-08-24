@@ -86,6 +86,7 @@ section img#moon1{
 }
 section img#front1{
     z-index: 10;
+    /* padding-left: -10%; */
 }
 #text{
     position: absolute;

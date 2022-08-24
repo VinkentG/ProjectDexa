@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import ApplicationLogo from "@/Components/ApplicationLogo";
 import Dropdown from "@/Components/Dropdown";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import Container from "react-bootstrap/Container";
 import NavLink from "@/Components/NavLink";
 import ResponsiveNavLink from "@/Components/ResponsiveNavLink";
 import { Link } from "@inertiajs/inertia-react";
@@ -18,7 +21,6 @@ export default function Authenticated({ auth, header, children }) {
                         <div className="flex">
                             <div className="shrink-0 flex items-center">
                                 <Link href="/">
-                                    {/* <ApplicationLogo className="block h-9 w-auto text-gray-500" /> */}
                                     <img
                                         src={logo1}
                                         className="w-14 h-15 fill-current text-gray-500"
@@ -166,7 +168,6 @@ export default function Authenticated({ auth, header, children }) {
                     </div>
                 </header>
             )}
-
             <main>{children}</main>
         </div>
     );

@@ -1,11 +1,5 @@
 import React, { useEffect } from "react";
-import Button from "@/Components/Button";
-import Checkbox from "@/Components/Checkbox";
 import Guest from "@/Layouts/Guest2";
-import Input from "@/Components/Input";
-import Label from "@/Components/Label";
-import ValidationErrors from "@/Components/ValidationErrors";
-import { Head, Link, useForm } from "@inertiajs/inertia-react";
 import logo from "./Logo/login.png";
 import stars from "./Home/stars.png";
 import front from "./Home/mountains_front.png";
@@ -14,41 +8,7 @@ import moon from "./Home/moon.png";
 import "../../css/home.css";
 // import Parallax from "react-scroll-parallax";
 
-export default function Home({ status, canResetPassword }) {
-    const { data, setData, post, processing, errors, reset } = useForm({
-        email: "",
-        password: "",
-        remember: "",
-    });
-
-    useEffect(() => {
-        return () => {
-            reset("password");
-        };
-    }, []);
-
-    const onHandleChange = (event) => {
-        setData(
-            event.target.name,
-            event.target.type === "checkbox"
-                ? event.target.checked
-                : event.target.value
-        );
-    };
-
-    const submit = (e) => {
-        e.preventDefault();
-
-        post(route("login"));
-    };
-
-    // const stars1 = document.getElementById("starts1");
-    // const moon1 = document.getElementById("moon1");
-    // const behind1 = document.getElementById("behind1");
-    // const front1 = document.getElementById("front1");
-    // const text = document.getElementById("text");
-    // const btn = document.getElementById("btn");
-
+export default function Home(props) {
     window.addEventListener("scroll", function () {
         const value = window.scrollY;
         stars1.style.left = value * 0.25 + "px";
@@ -62,74 +22,6 @@ export default function Home({ status, canResetPassword }) {
 
     return (
         <Guest>
-            {/* <Head title="Log in" />
-
-            {status && (
-                <div className="mb-4 font-medium text-sm text-green-600">
-                    {status}
-                </div>
-            )}
-
-            <ValidationErrors errors={errors} />
-
-            <form onSubmit={submit}>
-                <div>
-                    <Label forInput="email" value="Email" />
-
-                    <Input
-                        type="text"
-                        name="email"
-                        value={data.email}
-                        className="mt-1 block w-full"
-                        autoComplete="username"
-                        isFocused={true}
-                        handleChange={onHandleChange}
-                    />
-                </div>
-
-                <div className="mt-4">
-                    <Label forInput="password" value="Password" />
-
-                    <Input
-                        type="password"
-                        name="password"
-                        value={data.password}
-                        className="mt-1 block w-full"
-                        autoComplete="current-password"
-                        handleChange={onHandleChange}
-                    />
-                </div>
-
-                <div className="block mt-4">
-                    <label className="flex items-center">
-                        <Checkbox
-                            name="remember"
-                            value={data.remember}
-                            handleChange={onHandleChange}
-                        />
-
-                        <span className="ml-2 text-sm text-gray-600">
-                            Remember me
-                        </span>
-                    </label>
-                </div>
-
-                <div className="flex items-center justify-end mt-4">
-                    {canResetPassword && (
-                        <Link
-                            href={route("password.request")}
-                            className="underline text-sm text-gray-600 hover:text-gray-900"
-                        >
-                            Forgot your password?
-                        </Link>
-                    )}
-
-                    <Button className="ml-4" processing={processing}>
-                        Log in
-                    </Button>
-                </div>
-            </form> */}
-
             <header>
                 <a className="logo">Logo</a>
                 {/* <Link href="/">
